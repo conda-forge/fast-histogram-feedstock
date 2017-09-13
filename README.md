@@ -3,7 +3,7 @@ About fast-histogram
 
 Home: http://github.com/astrofrog/fast-histogram
 
-Package license: BSD
+Package license: BSD 2-Clause
 
 Feedstock license: BSD 3-Clause
 
