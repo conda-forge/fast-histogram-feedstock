@@ -1,6 +1,6 @@
 {% set name = "fast-histogram" %}
-{% set version = "0.2.1" %}
-{% set sha256 = "1cbefcb23a8fad6f904b73a6a8d7cc04127e3691cbb6f0cdd4fdd20a94f0dd0c" %}
+{% set version = "0.3" %}
+{% set sha256 = "fdfab401aed9ba2bf96cac2f41679dbb26e0da520e7fd0428e8b1aa20b47ac0d" %}
 
 package:
   name: {{ name|lower }}
@@ -20,10 +20,12 @@ requirements:
     - python
     - setuptools
     - toolchain
-    - numpy x.x
+    - numpy 1.10.*  # [not (win and (py35 or py36))]
+    - numpy 1.11.*  # [win and (py35 or py36)]
   run:
     - python
-    - numpy x.x
+    - numpy >=1.10  # [not (win and (py35 or py36))]
+    - numpy >=1.11  # [win and (py35 or py36)]
 
 test:
   imports:
