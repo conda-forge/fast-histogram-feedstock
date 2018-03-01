@@ -1,6 +1,6 @@
 {% set name = "fast-histogram" %}
-{% set version = "0.3" %}
-{% set sha256 = "fdfab401aed9ba2bf96cac2f41679dbb26e0da520e7fd0428e8b1aa20b47ac0d" %}
+{% set version = "0.4" %}
+{% set sha256 = "8afcea57930c9ede74ce304a45c5374128485e83c4c9ad143a8778c5ed281419" %}
 
 package:
   name: {{ name|lower }}
