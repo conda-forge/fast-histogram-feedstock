@@ -17,15 +17,14 @@ build:
 
 requirements:
   build:
+    - {{ compiler('c') }}
+  host:
     - python
     - setuptools
-    - toolchain
-    - numpy 1.10.*  # [not (win and (py35 or py36))]
-    - numpy 1.11.*  # [win and (py35 or py36)]
+    - numpy
   run:
     - python
-    - numpy >=1.10  # [not (win and (py35 or py36))]
-    - numpy >=1.11  # [win and (py35 or py36)]
+    - {{ pin_compatible('numpy') }}
 
 test:
   imports:
