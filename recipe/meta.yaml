@@ -1,6 +1,6 @@
 {% set name = "fast-histogram" %}
-{% set version = "0.4" %}
-{% set sha256 = "8afcea57930c9ede74ce304a45c5374128485e83c4c9ad143a8778c5ed281419" %}
+{% set version = "0.5" %}
+{% set sha256 = "0e3849e244909aa68e58305ed101c19c8576176eaf90fd5d79215d5ade51a6a7" %}
 
 package:
   name: {{ name|lower }}
@@ -13,19 +13,17 @@ source:
 
 build:
   number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
     - python
     - setuptools
-    - toolchain
-    - numpy 1.10.*  # [not (win and (py35 or py36))]
-    - numpy 1.11.*  # [win and (py35 or py36)]
+    - pip
+    - numpy
   run:
     - python
-    - numpy >=1.10  # [not (win and (py35 or py36))]
-    - numpy >=1.11  # [win and (py35 or py36)]
+    - {{ pin_compatible('numpy') }}
 
 test:
   imports:
