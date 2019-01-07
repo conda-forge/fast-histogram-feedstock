@@ -1,6 +1,6 @@
 {% set name = "fast-histogram" %}
-{% set version = "0.5" %}
-{% set sha256 = "0e3849e244909aa68e58305ed101c19c8576176eaf90fd5d79215d5ade51a6a7" %}
+{% set version = "0.6" %}
+{% set sha256 = "eb532a21fd58aec20c083a2c900527a4f9e9894fe64ed2f57a538871c9343d13" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1001
+  number: 1000
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
