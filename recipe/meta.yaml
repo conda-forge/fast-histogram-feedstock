@@ -1,6 +1,6 @@
 {% set name = "fast-histogram" %}
-{% set version = "0.7" %}
-{% set sha256 = "aabf0e0287ece8fb443dfd8c3bb36c784c07e3100906394d9baea91572067ca9" %}
+{% set version = "0.9" %}
+{% set sha256 = "6325ce42060bb9d1987a3aefffcac45bdd3810bc58ce69716132e23aa49f7a9f" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1000
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -36,7 +36,7 @@ about:
   license: BSD
   license_family: BSD
   license_file: LICENSE
-  summary: 'Fast 1D and 2D histogram functions in Python'
+  summary: Fast 1D and 2D histogram functions in Python
   description: Fast 1D and 2D histogram functions in Python
   doc_url: http://github.com/astrofrog/fast-histogram
   dev_url: http://github.com/astrofrog/fast-histogram
