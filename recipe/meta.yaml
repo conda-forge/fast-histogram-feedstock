@@ -33,7 +33,7 @@ test:
 
 about:
   home: http://github.com/astrofrog/fast-histogram
-  license: BSD
+  license: BSD-2-Clause
   license_family: BSD
   license_file: LICENSE
   summary: Fast 1D and 2D histogram functions in Python
