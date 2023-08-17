@@ -1,19 +1,18 @@
 {% set name = "fast-histogram" %}
-{% set version = "0.10" %}
-{% set sha256 = "6404fff03464aff630d5e3183d8e3c258788ac5f38f615a45b981077fe050e78" %}
+{% set version = "0.11" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fast-histogram-{{ version }}.tar.gz
+  sha256: 9acb6fa5b6efd928663008965da186962bdeae20e6d5bbb3b1195dfbd1d906f0
 
 build:
-  number: 2
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  skip: true  # [py2k]
+  script: {{ PYTHON }} -m pip install . -vv
+  number: 0
 
 requirements:
   build:
@@ -25,6 +24,8 @@ requirements:
     - python
     - setuptools
     - pip
+    - setuptools-scm
+    - wheel
     - numpy
   run:
     - python
@@ -33,16 +34,16 @@ requirements:
 test:
   imports:
     - fast_histogram
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
-  home: http://github.com/astrofrog/fast-histogram
+  home: https://github.com/astrofrog/fast-histogram
+  summary: Fast simple 1D and 2D histograms
   license: BSD-2-Clause
-  license_family: BSD
   license_file: LICENSE
-  summary: Fast 1D and 2D histogram functions in Python
-  description: Fast 1D and 2D histogram functions in Python
-  doc_url: http://github.com/astrofrog/fast-histogram
-  dev_url: http://github.com/astrofrog/fast-histogram
 
 extra:
   recipe-maintainers:
