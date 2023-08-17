@@ -3,17 +3,11 @@ About fast-histogram-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/fast-histogram-feedstock/blob/main/LICENSE.txt)
 
-Home: http://github.com/astrofrog/fast-histogram
+Home: https://github.com/astrofrog/fast-histogram
 
 Package license: BSD-2-Clause
 
-Summary: Fast 1D and 2D histogram functions in Python
-
-Development: http://github.com/astrofrog/fast-histogram
-
-Documentation: http://github.com/astrofrog/fast-histogram
-
-Fast 1D and 2D histogram functions in Python
+Summary: Fast simple 1D and 2D histograms
 
 Current build status
 ====================
