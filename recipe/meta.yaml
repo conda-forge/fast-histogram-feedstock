@@ -1,13 +1,14 @@
 {% set name = "fast-histogram" %}
-{% set version = "0.11" %}
+{% set author = "astrofrog" %}
+{% set version = "0.12" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fast-histogram-{{ version }}.tar.gz
-  sha256: 9acb6fa5b6efd928663008965da186962bdeae20e6d5bbb3b1195dfbd1d906f0
+  url: https://github.com/{{ author }}/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: 5b8fdedbedc8ab21b2d1a6656a99ef565d6abb4e7cb05c83c1feff184e64e106
 
 build:
   skip: true  # [py2k]
