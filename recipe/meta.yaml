@@ -1,18 +1,18 @@
 {% set name = "fast-histogram" %}
-{% set version = "0.11" %}
+{% set version = "0.13" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fast-histogram-{{ version }}.tar.gz
-  sha256: 9acb6fa5b6efd928663008965da186962bdeae20e6d5bbb3b1195dfbd1d906f0
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: da27a74b5ad7ebaf04b4a855c2ade39a9d41fbdb6ee7f07cba159422045c7af2
 
 build:
   skip: true  # [py2k]
   script: {{ PYTHON }} -m pip install . -vv
-  number: 2
+  number: 0
 
 requirements:
   build:
